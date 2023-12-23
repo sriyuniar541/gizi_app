@@ -46,7 +46,12 @@ app.get("/search/:query", (req, res) => {
       (product.SUMBER && product.SUMBER.toLowerCase().includes(query))
   );
 
-  res.json(result);
+  if (result) {
+    res.json(result);
+  } else {
+    res.status(404).json({ message: "Data not found" });
+  }
+
 });
 
 app.listen(port, () => {
