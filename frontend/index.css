@@ -5,14 +5,25 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  /* background-color: 	#F5F5F5; */
 }
 
 .title {
+  margin-bottom: 50px;
   text-align: center;
+  font-weight: 300;
 }
 
 .container {
-  padding: 50px;
+   overflow-x : auto;
+}
+
+#searchResults {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2)
+}
+
+th {
+  background-color: rgba(0, 0, 0, 0.03);
 }
 
 th,
@@ -33,14 +44,24 @@ td {
   border-radius: 15px;
   margin: 0 10px;
   width: 30%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: none;
 }
+
 
 .search_box button {
   padding: 5px;
   width: 50px;
+  height: 47px;
   border-radius: 10px;
   cursor: pointer;
+  background-color: white;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.search_box button:hover {
+  transform: scale(1.05);
 }
 
 
@@ -57,6 +78,24 @@ td {
 .container_books .card img:hover {
   transform: scale(1.05);
   opacity: 0.5;
+}
 
 
+/* untuk hp */
+@media screen and (max-width: 600px) {
+  
+  .title {
+    font-size: 16px;
+  }
+
+  .search_box input {
+    width: 50%;
+  }
+}
+
+/* ipad */
+@media screen and (max-width: 768px) {
+  .search_box input {
+    width: 50%;
+  }
 }
