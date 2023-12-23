@@ -20,82 +20,89 @@
     <!-- akhir navbar -->
 
     <!-- content -->
+    <div class="container_imt">
+      <div>
+        <h2 class="title">IMT (Index Masa Tubuh)</h2>
+        <p>
+          Indeks massa tubuh (IMT) digunakan untuk menentukan berat badan ideal berdasarkan perbandingan berat badan dan tinggi badan. Mengetahui cara menghitung IMT bisa menjadi langkah awal menjaga kesehatan. </br> </br>
 
-    <div class="container">
-      <h2>IMT (Index Masa Tubuh)</h2>
-      <p>
-        Indeks Massa Tubuh (IMT) atau Body Mass Index (BMI) adalah sebuah metode
-        pengukuran yang digunakan untuk mengevaluasi berat badan seseorang
-        berdasarkan tinggi badan. Formula IMT adalah sebagai berikut:
-      </p>
-      <img src="/asset/images/imt.png" />
-      <h5>Rumus IMT</h5>
-      <img src="/asset/images/Rumus-IMT.jpg" />
-      <br />
-      <!-- modal perhitungan imt -->
-      <button
-        type="button"
-        class="btn btn-primary"
-        data-bs-toggle="modal"
-        data-bs-target="#exampleModal"
-      >
-        Hitung IMT anda
-      </button>
+          Indeks massa tubuh atau body mass index (BMI) digunakan untuk mengetahui apakah berat badan termasuk dalam kategori normal, berlebih, atau justru kurang. Dengan mengetahui nilai IMT, Anda dapat mengambil langkah-langkah atau mengupayakan agar berat badan menjadi normal dan terhindar dari beragam gangguan kesehatan.
+        </p></br>
+        <h5>Rumus IMT</h5>
+        <p class="rumus_imt">Indeks massa tubuh (IMT) = berat badan (kg) : tinggi badan (m)²</p></br>
+        <img class="klasifikasi_imt" src="/asset/images/imt.png" />
+        
+        <br /><br />
+        <!-- modal perhitungan imt -->
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
+          Hitung IMT anda
+        </button>
 
-      <!-- Modal -->
-      <div
-        class="modal fade"
-        id="exampleModal"
-        tabindex="-1"
-        aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">
-                Perhitungan IMT
-              </h1>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body">
-              <h2>Indeks Massa Tubuh (IMT) Calculator</h2>
-              <div class="mb-3">
-                <label class="form-label" for="weight">Berat Badan (kg): </label>
-              <input
-                class="form-control"
-                type="text"
-                id="weight"
-                placeholder="Berat badan /kg"
-              />
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">
+                  Perhitungan IMT
+                </h1>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
               </div>
-              <div class="mb-3">
-                 <label class="form-label" for="height">Tinggi Badan (m): </label>
-              <input
-                class="form-control"
-                type="text"
-                id="height"
-                placeholder="Tinggi badan 1.50 /m "
-              />
+              <div class="modal-body">
+                <div class="mb-3">
+                  <label class="form-label" for="weight"
+                    >Berat Badan (kg):
+                  </label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    id="weight"
+                    placeholder=" 50 kg"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label" for="height"
+                    >Tinggi Badan (m):
+                  </label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    id="height"
+                    placeholder="Tinggi badan 1.50 /m "
+                  />
+                </div>
+
+                <button onclick="calculateBMI()" class="btn btn-primary">
+                  Hitung IMT
+                </button>
+
+                <div id="result" class="my-3 btn btn-white"></div>
               </div>
-
-              <button onclick="calculateBMI()" class="btn btn-primary">Hitung IMT</button>
-
-              <div id="result" class="my-3 btn btn-white"></div>
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-secondary"
-                data-bs-dismiss="modal"
-              >
-                Close
-              </button>
+              <!-- <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div> -->
             </div>
           </div>
         </div>
