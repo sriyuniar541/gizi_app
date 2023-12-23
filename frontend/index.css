@@ -88,6 +88,11 @@ td {
   width: 100%;
 }
 
+
+.container_book .read_pdf {
+  width: 100%;
+}
+
 .card img:hover {
   cursor: pointer;
   scale: 1;

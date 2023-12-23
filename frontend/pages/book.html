@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buku Gizi</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../index.css" />
+  </head>
+  <body>
+    <!-- navbar -->
+
+    <div id="navbar-container"></div>
+
+    <!-- akhir navbar -->
+   
+
+    <!-- content -->
+    <div class=" container_book">
+        <embed class="read_pdf" type="application/pdf" width="800" height="600"/>
+        </div>
+        <!-- akhir content -->
+
+       <script src="../index.js"></script>
+       <script src="../componen/navbar.js"></script>
+       <script
+         src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+         crossorigin="anonymous"
+       ></script>
+       <script
+         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+         crossorigin="anonymous"
+       ></script>
+
+       <script>
+        // Mengambil nilai parameter 'src' dari URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const srcParam = urlParams.get('src');
+    
+        // Mendapatkan elemen gambar berdasarkan ID
+        const pdf = document.querySelector('.read_pdf');
+    
+        // Mengatur src elemen gambar dengan nilai parameter 'src'
+        if (srcParam) {
+            pdf.src = srcParam;
+        } else {
+            pdf.src = "../tes.pdf"; 
+        }
+    </script>
+     </body>
+   </html>
+
+   
+   
